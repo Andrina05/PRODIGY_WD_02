@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Stopwatch App</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="stopwatch-container">
+            <h1>Stopwatch</h1>
+            <div id="display">00:00:00:00</div>
+            <div class="controls">
+                <button class="startBtn" id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="lapBtn">Lap</button>
+            </div>
+            <div class="laps">
+                <h2>Lap Times</h2>
+                <ul id="lapList"></ul>
+                <h3>Best Lap Time: <span id="bestLap">N/A</span></h3>
+            </div>
+        </div>
+        <script src="timefunctions.js"></script>
+    </body>
+</html>
