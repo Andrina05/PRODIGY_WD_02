@@ -17,24 +17,25 @@
                 <button class="startBtn" id="startBtn">Start</button>
                 <button id="pauseBtn">Pause</button>
                 <button id="lapBtn">Lap</button>
-            </div>
+            </div> <br><br>
+
+            <span><h3>Best Lap Time: <span id="bestLap">N/A</span></h3> <br>
+
             <div class="laps">
+                <div class="lapTableContainer">
+                    <table class="table-borderless p-5" id="lapList">
+                        <thead>
+                            <tr>
+                                <th>Lap no.</th>
+                                <th>Lap Time</th>
+                                <th>Reached at</th>
+                            </tr>
+                        </thead>
+                        <tbody class="lap-time"></tbody>
+                    </table>
+                </div>
 
-                <!-- <h2>Lap Times</h2>
-                <ul id="lapList"></ul> -->
-                <table class="table-borderless table" id="lapList">
-                    <thead>
-                        <tr>
-                            <th>Lap no.</th>
-                            <th>Lap Time</th>
-                            <th>Reached at</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-
-                </table>
-
-                <h3>Best Lap Time: <span id="bestLap">N/A</span></h3>
+                
             </div>
         </div>
         <script src="timerfunctions.js"></script>
