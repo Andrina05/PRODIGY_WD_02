@@ -6,7 +6,7 @@ A stopwatch web application that is responsive and user friendly. Features:
 5) Another JavaScript function is activated when the user clicks on the 'Lap' button, and it determines the lap time.
 6) CSS and Bootstrap were used to add the styling.
 Main elements are:
-1) The timer itself, displaying time in hr:mins:secs:ms.
-2) Buttons for starting, pausing and recording a lap.
-3) A section for displaying the best (shortest) lap time.
-4) A table displaying all lap times for tracking.
+ 1) The timer itself, displaying time in hr:mins:secs:ms.
+ 2) Buttons for starting, pausing and recording a lap.
+ 3) A section for displaying the best (shortest) lap time.
+ 4) A table displaying all lap times for tracking.
