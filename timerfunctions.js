@@ -51,8 +51,6 @@ const startTimer = () => {
         pauseButton.disabled = false;
         lapButton.disabled = false;
 
-        console.log("Start time: ", startTime);
-        console.log("Lap start times: ", lapStartTimes);
         tInterval = setInterval(displayTime, 10);
         running = true;
     }
@@ -68,7 +66,6 @@ const pauseTimer = () => {
     if (running && !paused) {
         clearInterval(tInterval);
         startTime = elapsedTime;
-        console.log("Paused at: ", startTime);
         pauseButton.textContent = "Resume";
         lapButton.disabled = true;
         running = false;
@@ -138,7 +135,6 @@ const recordLap = () => {
         // Determine when a lap ends
         lapEndTime = lapStartTimes[lapStartTimes.length - 1] + elapsedTime;
         lapEndTimes.push(lapEndTime);
-        console.log("Lap end times: ", lapEndTimes);
 
         // Time when one lap ends will be when the next lap starts
         lapStartTime = lapStartTimes[lapStartTimes.length - 1];
@@ -146,11 +142,9 @@ const recordLap = () => {
         // Find the time taken for current lap
         lapTime = (lapEndTime - lapStartTime) - totalLapTime;
         lapTimes.push(lapTime);
-        console.log("Lap time: ", lapTime);
 
         // Total time for all laps
         totalLapTime += lapTime;
-        console.log("Total lap time: ", totalLapTime);
 
         // Format current lap time
         let lapHrs = Math.floor((lapTime / (1000 * 60 * 60)) % 24);
@@ -182,7 +176,6 @@ const recordLap = () => {
             bestLapDisplay.innerHTML = `${formattedLapTime}`;
         }
         lapStartTimes.push(lapEndTime);
-        console.log("Lap starting times:", lapStartTimes);
     }
 }
 
