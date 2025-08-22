@@ -10,39 +10,40 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 
-<body class="stopwatchapp mt-5">
-    <div class="stopwatch-container">
-        <center>
-            <h1>Stopwatch</h1>
-            <div id="display">00:00:00:00</div>
-            <div class="controls">
-                <button class="startBtn" id="startBtn">Start</button>
-                <button class="pauseBtn" id="pauseBtn">Pause</button>
-                <button class="lapBtn" id="lapBtn">Lap</button>
+<body class="stopwatchapp mt-sm-4 justify-content-sm-center">
+    <div class="stopwatch-container container d-flex justify-content-center row row-cols-md-2 pt-sm-2 p-md-5">
+        <div class="mainTimerContainer mb-5 me-md-5 mt-md-5">
+            <center>
+                <h1>Stopwatch</h1>
+                <div id="display">00:00:00:00</div>
+                <div class="controls">
+                    <button class="startBtn" id="startBtn">Start</button>
+                    <button class="pauseBtn" id="pauseBtn">Pause</button>
+                    <button class="lapBtn" id="lapBtn">Lap</button>
+                </div>
+            </center>
+        </div> <br>
+
+        <div class="lapContainer ms-md-5 justify-content-center">
+            <span class="justify-content-center d-flex">
+                <h3>Best Lap Time: <span id="bestLap">N/A</h3>
+            </span>
+            <br>
+
+            <div class="laps justify-content-center d-flex">
+                <div class="lapTableContainer">
+                    <table class="table-borderless p-5" id="lapList">
+                        <thead>
+                            <tr>
+                                <th>Lap no.</th>
+                                <th>Lap Time</th>
+                                <th>Reached at</th>
+                            </tr>
+                        </thead>
+                        <tbody class="lap-time"></tbody>
+                    </table>
+                </div>
             </div>
-        </center>
-        <br><br>
-
-        <span>
-            <h3>Best Lap Time: <span id="bestLap">N/A</h3>
-        </span>
-        <br>
-
-        <div class="laps">
-            <div class="lapTableContainer">
-                <table class="table-borderless p-5" id="lapList">
-                    <thead>
-                        <tr>
-                            <th>Lap no.</th>
-                            <th>Lap Time</th>
-                            <th>Reached at</th>
-                        </tr>
-                    </thead>
-                    <tbody class="lap-time"></tbody>
-                </table>
-            </div>
-
-
         </div>
     </div>
     <script src="timerfunctions.js"></script>
