@@ -1,12 +1,11 @@
-body {
+.stopwatchapp {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
     height: 100vh;
-    margin: 0;
-    background-color:darkgreen;
+    background-color:rgb(3, 81, 3);
     color: white;
 }
 
@@ -19,19 +18,55 @@ h1 {
     margin-bottom: 20px;
 }
 
-button {
+.startBtn, .pauseBtn, .lapBtn, .resetBtn {
     padding: 10px 20px;
     font-size: 16px;
-    margin: 5px;
+    margin-left: 5px;
+    margin-right: 2.5px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s; transform: 0.3s;
 }
 
+.pauseBtn:disabled, .lapBtn:disabled {
+    background-color: darkgrey;
+    cursor: not-allowed;
+} 
+
 button:hover {
-    background-color: #ddd;
     transform: scale(1.05);
+}
+
+.startBtn {
+    background-color: greenyellow;
+    transition: background-color 0.3s; transform: 0.3s;
+}
+.startBtn:hover {
+    background-color: lawngreen;
+}
+
+.resetBtn {
+    background-color: indianred;
+    transition: background-color 0.3s; transform: 0.3s;
+}
+.resetBtn:hover {
+    background-color: red;
+}
+
+.pauseBtn:enabled {
+    background-color: gold;
+    transition: background-color 0.3s; transform: 0.3s;
+}
+.pauseBtn:enabled:hover {
+    background-color: orange; 
+}
+
+.lapBtn:enabled {
+    background-color: deepskyblue;
+    transition: background-color 0.3s; transform: 0.3s;
+}
+.lapBtn:enabled:hover {
+    background-color: dodgerblue;
 }
 
 .lapTableContainer {
@@ -40,6 +75,7 @@ button:hover {
     margin-bottom: 20px;
     width: 100%;
     max-width: 400px;
+    border-radius: 10px;
 }
 
 table {
@@ -52,12 +88,16 @@ thead th {
     text-align: left;
     z-index: 1;
     top: 0;
-    background-color:darkseagreen 
+    background-color:rgb(111, 184, 111) 
 }
 
 th, td {
     padding: 10px;
     text-align: left;
+}
+
+td {
+    background-color: rgb(99, 156, 0);
 }
 
 .lap-time tr {

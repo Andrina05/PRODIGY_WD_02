@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Responsive Stopwatch App</title>
-        <link rel="stylesheet" href="timerstyles.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    </head>
 
-    <body>
-        <div class="stopwatch-container">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Stopwatch App</title>
+    <link rel="stylesheet" href="timerstyles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body class="stopwatchapp mt-5">
+    <div class="stopwatch-container">
+        <center>
             <h1>Stopwatch</h1>
             <div id="display">00:00:00:00</div>
             <div class="controls">
                 <button class="startBtn" id="startBtn">Start</button>
-                <button id="pauseBtn">Pause</button>
-                <button id="lapBtn">Lap</button>
-            </div> <br><br>
-
-            <span><h3>Best Lap Time: <span id="bestLap">N/A</span></h3> <br>
-
-            <div class="laps">
-                <div class="lapTableContainer">
-                    <table class="table-borderless p-5" id="lapList">
-                        <thead>
-                            <tr>
-                                <th>Lap no.</th>
-                                <th>Lap Time</th>
-                                <th>Reached at</th>
-                            </tr>
-                        </thead>
-                        <tbody class="lap-time"></tbody>
-                    </table>
-                </div>
-
-                
+                <button class="pauseBtn" id="pauseBtn">Pause</button>
+                <button class="lapBtn" id="lapBtn">Lap</button>
             </div>
+        </center>
+        <br><br>
+
+        <span>
+            <h3>Best Lap Time: <span id="bestLap">N/A</h3>
+        </span>
+        <br>
+
+        <div class="laps">
+            <div class="lapTableContainer">
+                <table class="table-borderless p-5" id="lapList">
+                    <thead>
+                        <tr>
+                            <th>Lap no.</th>
+                            <th>Lap Time</th>
+                            <th>Reached at</th>
+                        </tr>
+                    </thead>
+                    <tbody class="lap-time"></tbody>
+                </table>
+            </div>
+
+
         </div>
-        <script src="timerfunctions.js"></script>
-    </body>
+    </div>
+    <script src="timerfunctions.js"></script>
+</body>
+
 </html>

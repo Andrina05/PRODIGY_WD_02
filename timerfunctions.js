@@ -45,6 +45,8 @@ const startTimer = () => {
             startTime = new Date().getTime() - elapsedTime;
         }
 
+        startButton.classList.remove("startBtn");
+        startButton.classList.add("resetBtn");
         startButton.textContent = "Reset";
         pauseButton.disabled = false;
         lapButton.disabled = false;
@@ -107,6 +109,8 @@ const resetTimer = () => {
     lapDisplay.innerHTML = "";
     bestLapDisplay.innerHTML = "N/A";
     bestLapTime = null;
+    startButton.classList.add("startBtn");
+    startButton.classList.remove("resetBtn");
     startButton.textContent = "Start";
     pauseButton.textContent = "Pause";
     pauseButton.disabled = true;
